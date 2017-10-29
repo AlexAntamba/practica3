@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="HornosLosAndes">
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ABC"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Compras"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/MaestroProveedores"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/MaestroHornos"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Incidencias"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Mantenimiento"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Observaciones"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Empleados"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/MaestroMateriales"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Pedidos"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Materiales"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/GUI"/>
+        <property name="context-root" value="HornosLosAndes"/>
+        <property name="java-output-path"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,126 @@
+create database losandes;
+
+use losandes;
+
+CREATE TABLE usuarios(
+       login         varchar(50) NOT NULL,
+       password      varchar(50) NULL,
+       nombre        varchar(50) NULL,
+       tipoUsuario   varchar(50) NULL
+);
+
+ALTER TABLE usuarios
+       ADD PRIMARY KEY (login);
+
+CREATE TABLE Auditoria(
+ codigo  integer NOT NULL,
+ usuario  varchar(50) NOT NULL,
+ accion varchar(50) NOT NULL, 
+ detalle varchar(50) NOT NULL,
+ fecreg  varchar(50) NOT NULL
+);
+
+
+ALTER TABLE Auditoria
+       ADD PRIMARY KEY (codigo);
+
+CREATE TABLE materiales(
+ codigo  integer NOT NULL,
+ nombre  varchar(50) NOT NULL,
+ tipo  varchar(50) NOT NULL, 
+ durabilidad varchar(50) NOT NULL,
+ fecreg  varchar(50) NOT NULL, 
+ detuso  varchar(50) NOT NULL, 
+
+ stock  int NOT NULL,
+ estado  int NOT NULL
+);
+
+
+ALTER TABLE materiales
+       ADD PRIMARY KEY (codigo);
+       
+CREATE TABLE proveedores(
+ codigo  integer NOT NULL,
+ nombre  varchar(50) NOT NULL,
+ direccion varchar(50) NOT NULL,
+ telefono varchar(50) NOT NULL,
+ email  varchar(50) NOT NULL,
+ ciudad  varchar(50) NOT NULL,
+ fechainicio varchar(50) NOT NULL,
+ estado  int NOT NULL
+);
+
+
+ALTER TABLE proveedores
+       ADD PRIMARY KEY (codigo);
+
+CREATE TABLE empleados(
+ codigo  integer NOT NULL,
+ nombre  varchar(50) NOT NULL,
+ apellido varchar(50) NOT NULL, 
+ direccion varchar(50) NOT NULL,
+ email  varchar(50) NOT NULL, 
+ telefono varchar(50) NOT NULL, 
+
+ estado  int NOT NULL
+);
+
+
+ALTER TABLE empleados
+       ADD PRIMARY KEY (codigo);
+
+
+CREATE TABLE hornos(
+ codigo  integer NOT NULL,
+ modelo  varchar(50) NOT NULL,
+ garantia varchar(50) NOT NULL, 
+ descripcion varchar(50) NOT NULL, 
+ fecreg  varchar(50) NOT NULL,
+ dimensiones varchar(50) NOT NULL,
+ stock  int NOT NULL,
+ precio  double NOT NULL, 
+ estado  int NOT NULL
+);
+
+create table tb_ordendecompra(
+  nro integer not null primary key,
+  estado integer,
+  prioridad varchar(15),
+  fecha varchar(30)
+);
+
+create table tb_factura(
+	codigo integer not null primary key,
+	nombre varchar(50) not null,
+	nroOrden integer,
+	total decimal,
+	fecha varchar(30)
+);
+
+create table tb_detallefactura(
+	codigo integer,
+	codHorno integer,
+	cantidad integer,
+	precio decimal,
+	subtotal decimal
+);
+
+create table tb_detalleordendecompra(
+  nro integer,
+  codigo integer,
+  cantidad integer,
+  subtotal decimal
+);
+
+
+ALTER TABLE hornos
+       ADD PRIMARY KEY (codigo);
+
+insert into usuarios values('arturo','lightofheaven','Arturo Marruffo','Administrador');
+
+insert into usuarios values('lucki','lucki','Lucki Fernandez','Administrador');
+
+insert into usuarios values('luis','luis','Luis Canales','Usuario');
+
+insert into usuarios values('jorge','jorge','Jorge Luis Jimenez','Administrador');
